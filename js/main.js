@@ -3,17 +3,34 @@
  * Handles animations, timeline, navigation, and interactions
  */
 
+// Wait for both DOM and translations to be ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize components after i18n loads
-    setTimeout(() => {
-        initNavigation();
+    initNavigation();
+    initParticles();
+
+    // Wait for translations to load, then initialize content
+    waitForTranslations().then(() => {
         initTypingEffect();
         initTimeline();
         initProjects();
         initScrollAnimations();
-        initParticles();
-    }, 100);
+    });
 });
+
+// Wait for i18n translations to be loaded
+function waitForTranslations() {
+    return new Promise((resolve) => {
+        const checkTranslations = () => {
+            if (window.i18n && window.i18n.getCurrentTranslations()) {
+                resolve();
+            } else {
+                setTimeout(checkTranslations, 100);
+            }
+        };
+        // Start checking after a small delay
+        setTimeout(checkTranslations, 200);
+    });
+}
 
 // Listen for language changes
 window.addEventListener('languageChanged', () => {
@@ -32,31 +49,27 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Navbar scroll effect
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add/remove scrolled class
-        if (currentScroll > 50) {
+        if (window.pageYOffset > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        lastScroll = currentScroll;
     });
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // Close mobile menu on link click
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
         });
     });
 
@@ -66,7 +79,7 @@ function initNavigation() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const navHeight = navbar.offsetHeight;
+                const navHeight = navbar ? navbar.offsetHeight : 70;
                 const targetPosition = target.offsetTop - navHeight;
                 window.scrollTo({
                     top: targetPosition,
@@ -131,28 +144,20 @@ function initTypingEffect() {
 
         if (!isDeleting && charIndex === currentTitle.length) {
             isDeleting = true;
-            typingSpeed = 2000; // Pause at end
+            typingSpeed = 2000;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             titleIndex = (titleIndex + 1) % titles.length;
-            typingSpeed = 500; // Pause before new word
+            typingSpeed = 500;
         }
 
         setTimeout(type, typingSpeed);
     }
 
-    // Clear any existing timeout
-    if (window.typingTimeout) {
-        clearTimeout(window.typingTimeout);
-    }
-
-    // Reset
     typedElement.textContent = '';
     charIndex = 0;
     titleIndex = 0;
     isDeleting = false;
-
-    // Start typing
     type();
 }
 
@@ -166,6 +171,8 @@ function initTimeline() {
     const translations = window.i18n?.getCurrentTranslations();
     const jobs = translations?.experience?.jobs || [];
 
+    console.log('Loading timeline with', jobs.length, 'jobs');
+
     timeline.innerHTML = '';
 
     jobs.forEach((job, index) => {
@@ -173,7 +180,6 @@ function initTimeline() {
         timeline.appendChild(item);
     });
 
-    // Initialize scroll animations for timeline items
     observeTimelineItems();
 }
 
@@ -228,12 +234,22 @@ function initProjects() {
     const translations = window.i18n?.getCurrentTranslations();
     const projects = translations?.projects?.items || [];
 
+    console.log('Loading projects:', projects.length, 'items');
+
     projectsGrid.innerHTML = '';
+
+    if (projects.length === 0) {
+        projectsGrid.innerHTML = '<p style="color: var(--color-text-secondary);">Loading projects...</p>';
+        return;
+    }
 
     projects.forEach((project, index) => {
         const card = createProjectCard(project, index);
         projectsGrid.appendChild(card);
     });
+
+    // Re-observe for scroll animations
+    initScrollAnimations();
 }
 
 function createProjectCard(project, index) {
@@ -270,96 +286,54 @@ function createProjectCard(project, index) {
  * Scroll Animations
  */
 function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-    // Observe elements with reveal class
-    document.querySelectorAll('.reveal, .skill-category, .education-card, .cert-item').forEach(el => {
-        el.classList.add('reveal');
+    document.querySelectorAll('.reveal, .skill-category, .education-card, .cert-item, .project-card').forEach(el => {
         observer.observe(el);
     });
 }
 
 /**
- * Particles Background (Simple implementation)
+ * Particles Background
  */
 function initParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
 
-    const particleCount = 50;
-
-    for (let i = 0; i < particleCount; i++) {
-        createParticle(particlesContainer);
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 3 + 1}px;
+            height: ${Math.random() * 3 + 1}px;
+            background: rgba(100, 255, 218, ${Math.random() * 0.3 + 0.1});
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: float ${Math.random() * 10 + 10}s ease-in-out infinite;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        particlesContainer.appendChild(particle);
     }
-}
-
-function createParticle(container) {
-    const particle = document.createElement('div');
-    particle.style.cssText = `
-        position: absolute;
-        width: ${Math.random() * 3 + 1}px;
-        height: ${Math.random() * 3 + 1}px;
-        background: rgba(100, 255, 218, ${Math.random() * 0.3 + 0.1});
-        border-radius: 50%;
-        left: ${Math.random() * 100}%;
-        top: ${Math.random() * 100}%;
-        animation: float ${Math.random() * 10 + 10}s ease-in-out infinite;
-        animation-delay: ${Math.random() * 5}s;
-    `;
-    container.appendChild(particle);
 }
 
 // Add float animation
 const style = document.createElement('style');
 style.textContent = `
     @keyframes float {
-        0%, 100% {
-            transform: translateY(0) translateX(0);
-            opacity: 0.5;
-        }
-        25% {
-            transform: translateY(-20px) translateX(10px);
-            opacity: 1;
-        }
-        50% {
-            transform: translateY(-10px) translateX(-10px);
-            opacity: 0.7;
-        }
-        75% {
-            transform: translateY(-30px) translateX(5px);
-            opacity: 0.9;
-        }
+        0%, 100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+        25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+        50% { transform: translateY(-10px) translateX(-10px); opacity: 0.7; }
+        75% { transform: translateY(-30px) translateX(5px); opacity: 0.9; }
     }
 `;
 document.head.appendChild(style);
-
-/**
- * Utility Functions
- */
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Handle resize
-window.addEventListener('resize', debounce(() => {
-    // Recalculate any size-dependent elements
-}, 250));

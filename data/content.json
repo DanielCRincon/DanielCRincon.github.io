@@ -202,32 +202,45 @@
       "items": [
         {
           "title": "Colombia-IA",
-          "description": "Iniciativa open-source para democratizar la inteligencia artificial en Colombia. Herramientas de codigo abierto, soluciones de bajo costo y alto impacto social.",
+          "description": "Iniciativa open-source para democratizar la inteligencia artificial en Colombia. Comunidad y herramientas de codigo abierto.",
           "tags": ["Open Source", "AI", "Python", "Community"],
-          "github": "https://github.com/colombia-ia",
           "website": "https://colombia-ia.github.io/",
           "icon": "fa-robot"
         },
         {
           "title": "Edge Labs Dev",
-          "description": "Plataforma de desarrollo enfocada en Automatizacion e Inteligencia Artificial. Soluciones empresariales con Go, PostgreSQL y arquitecturas modernas.",
+          "description": "Plataforma de desarrollo enfocada en Automatizacion e Inteligencia Artificial con Go, PostgreSQL y Docker.",
           "tags": ["Go", "PostgreSQL", "Docker", "AI"],
           "website": "https://edgelabsdev.com/",
           "icon": "fa-microchip"
         },
         {
-          "title": "SurvivalArena",
-          "description": "Videojuego 2D con oponentes IA y mecanicas de combate. Desarrollado en Unity con patrones de diseno y comportamientos inteligentes.",
-          "tags": ["Unity", "C#", "Game Dev", "AI"],
-          "github": "https://github.com/DanielCRincon/SurvivalArena",
-          "icon": "fa-gamepad"
+          "title": "SAP UI5 Projects",
+          "description": "Proyectos de desarrollo en SAP UI5 y Fiori. Aplicaciones empresariales con interfaz moderna.",
+          "tags": ["SAP UI5", "Fiori", "JavaScript", "ABAP"],
+          "github": "https://github.com/DanielCRincon/MasterSAPUI5DCR",
+          "icon": "fa-layer-group"
         },
         {
           "title": "Security Portfolio",
-          "description": "Coleccion de ejercicios de ciberseguridad y CTF challenges. Demostracion de habilidades en seguridad informatica y ethical hacking.",
+          "description": "Writeups, labs y scripts de ciberseguridad. Ejercicios de pentesting y CTF challenges.",
           "tags": ["Security", "CTF", "Python", "Pentesting"],
-          "github": "https://github.com/DanielCRincon/Security-Portfolio",
+          "github": "https://github.com/DanielCRincon/security-portfolio",
           "icon": "fa-shield-halved"
+        },
+        {
+          "title": "Inteligencia Artificial",
+          "description": "Repositorio de proyectos y experimentos de Machine Learning e Inteligencia Artificial.",
+          "tags": ["Python", "ML", "AI", "Data Science"],
+          "github": "https://github.com/DanielCRincon/Inteligencia_Artificial",
+          "icon": "fa-brain"
+        },
+        {
+          "title": "Web Apps Collection",
+          "description": "Coleccion de aplicaciones web: Weather App, Memory Game, Task Manager con JavaScript.",
+          "tags": ["JavaScript", "HTML", "CSS", "APIs"],
+          "github": "https://github.com/DanielCRincon/WaetherProject",
+          "icon": "fa-globe"
         }
       ]
     },
@@ -450,32 +463,45 @@
       "items": [
         {
           "title": "Colombia-IA",
-          "description": "Open-source initiative to democratize artificial intelligence in Colombia. Open source tools, low-cost solutions with high social impact.",
+          "description": "Open-source initiative to democratize AI in Colombia. Community and open source tools.",
           "tags": ["Open Source", "AI", "Python", "Community"],
-          "github": "https://github.com/colombia-ia",
           "website": "https://colombia-ia.github.io/",
           "icon": "fa-robot"
         },
         {
           "title": "Edge Labs Dev",
-          "description": "Development platform focused on Automation and Artificial Intelligence. Enterprise solutions with Go, PostgreSQL and modern architectures.",
+          "description": "Development platform focused on Automation and AI with Go, PostgreSQL and Docker.",
           "tags": ["Go", "PostgreSQL", "Docker", "AI"],
           "website": "https://edgelabsdev.com/",
           "icon": "fa-microchip"
         },
         {
-          "title": "SurvivalArena",
-          "description": "2D video game with AI opponents and combat mechanics. Developed in Unity with design patterns and intelligent behaviors.",
-          "tags": ["Unity", "C#", "Game Dev", "AI"],
-          "github": "https://github.com/DanielCRincon/SurvivalArena",
-          "icon": "fa-gamepad"
+          "title": "SAP UI5 Projects",
+          "description": "SAP UI5 and Fiori development projects. Enterprise applications with modern interface.",
+          "tags": ["SAP UI5", "Fiori", "JavaScript", "ABAP"],
+          "github": "https://github.com/DanielCRincon/MasterSAPUI5DCR",
+          "icon": "fa-layer-group"
         },
         {
           "title": "Security Portfolio",
-          "description": "Collection of cybersecurity exercises and CTF challenges. Demonstration of computer security and ethical hacking skills.",
+          "description": "Writeups, labs and cybersecurity scripts. Pentesting exercises and CTF challenges.",
           "tags": ["Security", "CTF", "Python", "Pentesting"],
-          "github": "https://github.com/DanielCRincon/Security-Portfolio",
+          "github": "https://github.com/DanielCRincon/security-portfolio",
           "icon": "fa-shield-halved"
+        },
+        {
+          "title": "Artificial Intelligence",
+          "description": "Repository of Machine Learning and AI projects and experiments.",
+          "tags": ["Python", "ML", "AI", "Data Science"],
+          "github": "https://github.com/DanielCRincon/Inteligencia_Artificial",
+          "icon": "fa-brain"
+        },
+        {
+          "title": "Web Apps Collection",
+          "description": "Collection of web apps: Weather App, Memory Game, Task Manager with JavaScript.",
+          "tags": ["JavaScript", "HTML", "CSS", "APIs"],
+          "github": "https://github.com/DanielCRincon/WaetherProject",
+          "icon": "fa-globe"
         }
       ]
     },
