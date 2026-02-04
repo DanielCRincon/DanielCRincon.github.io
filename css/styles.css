@@ -468,10 +468,8 @@ img {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 60px;
-    align-items: start;
+    display: block;
+    max-width: 800px;
 }
 
 .about-text p {
