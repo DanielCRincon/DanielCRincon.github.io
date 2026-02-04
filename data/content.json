@@ -1,0 +1,498 @@
+{
+  "es": {
+    "nav": {
+      "about": "Sobre Mi",
+      "experience": "Experiencia",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "education": "Educacion",
+      "contact": "Contacto",
+      "download": "Descargar CV"
+    },
+    "hero": {
+      "greeting": "Hola, mi nombre es",
+      "titles": [
+        "SAP ABAP Consultant",
+        "Full Stack Developer",
+        "Scrum Master",
+        "Ingeniero de Software"
+      ],
+      "description": "Ingeniero de Software e Industrial con un perfil tecnico hibrido. Especializado en SAP ABAP y desarrollo Full Stack con Go, PostgreSQL y Docker.",
+      "cta": "Ver mi experiencia",
+      "contact": "Contactame"
+    },
+    "about": {
+      "title": "Sobre Mi",
+      "p1": "Soy un profesional con formacion dual como <span class=\"highlight\">Ingeniero de Software</span> e <span class=\"highlight\">Ingeniero Industrial</span>, lo que me brinda una perspectiva unica para abordar problemas tecnicos y de negocio.",
+      "p2": "Cuento con una solida trayectoria de <span class=\"highlight\">+13 anos</span> en el mundo SAP, especializandome en desarrollo ABAP para modulos FI, SD, MM y HR. Actualmente, expando mi perfil como <span class=\"highlight\">Desarrollador Full Stack</span>, construyendo soluciones modernas con Go, PostgreSQL y Docker.",
+      "p3": "Mi enfoque une la robustez del mundo Enterprise con la agilidad de las nuevas tecnologias. Soy fundador de <span class=\"highlight\">Colombia-IA</span>, iniciativa open-source para democratizar la inteligencia artificial.",
+      "years": "Anos de experiencia",
+      "projects": "Proyectos completados",
+      "certifications": "Certificaciones"
+    },
+    "experience": {
+      "title": "Experiencia Profesional",
+      "jobs": [
+        {
+          "title": "Freelance Junior Full Stack Developer",
+          "company": "EdgeLabsDev",
+          "date": "Enero 2025 - Presente",
+          "location": "Remoto",
+          "description": [
+            "Desarrollar e integrar interfaces de frontend (HTML/CSS/JS) con servicios de backend en Go, asegurando comunicacion fluida via API REST",
+            "Implementar arquitectura de seguridad mediante JWT y middleware para proteger endpoints",
+            "Desplegar entornos de infraestructura (PostgreSQL y pgAdmin) con Docker Compose",
+            "Optimizar el flujo de desarrollo mediante herramientas de IA generativa (Claude Code)",
+            "Configurar repositorios en Git y gestionar tareas mediante metodologias agiles"
+          ],
+          "tags": ["Go", "PostgreSQL", "Docker", "JWT", "REST API", "Git"]
+        },
+        {
+          "title": "Freelance Desarrollador SAP ABAP",
+          "company": "Star Net Consulting, Inc.",
+          "date": "Noviembre 2024 - Presente",
+          "location": "Remoto",
+          "description": [
+            "Desarrollo de Programas Z: Diseno y construccion de reportes ALV y programas a medida",
+            "Integracion con BAPIs (SD): Automatizacion de procesos de ventas mediante BAPIs estandar",
+            "Exposicion de Servicios OData: Desarrollo de servicios OData en SAP Gateway",
+            "Optimizacion y Tuning: Analisis de rendimiento y refactorizacion de codigo legado",
+            "Soporte Tecnico Especializado: Resolucion de incidencias mediante depuracion profunda"
+          ],
+          "tags": ["ABAP", "SAP SD", "OData", "BAPIs", "ALV", "Gateway"]
+        },
+        {
+          "title": "Freelance Desarrollador ABAP HR - FI",
+          "company": "SMX Services & Consulting, Inc.",
+          "date": "Diciembre 2024 - Presente",
+          "location": "Remoto",
+          "description": [
+            "Mantenimiento y optimizacion de aplicaciones en SAP GUI y Web Dynpro ABAP",
+            "Desarrollo de personalizaciones mediante enhancements y user exits",
+            "Creacion de infotipos personalizados y ajustes sobre infotipos estandar del modulo SAP HR",
+            "Implementacion y soporte de formularios SmartForms y HRFORM",
+            "Desarrollo e integracion mediante SAP PI para comunicacion entre sistemas"
+          ],
+          "tags": ["ABAP", "SAP HR", "SAP FI", "SmartForms", "SAP PI", "Web Dynpro"]
+        },
+        {
+          "title": "Consultor Funcional Junior SAP UI5",
+          "company": "Innova SAS",
+          "date": "Noviembre 2024 - Enero 2025",
+          "location": "Remoto",
+          "description": [
+            "Levantamiento de requerimientos funcionales para aplicacion SAP UI5 orientada al modulo MM",
+            "Elaboracion de especificaciones funcionales detalladas para desarrollos ABAP y disenos UI5",
+            "Coordinacion con desarrolladores ABAP para validar RFCs y funciones entregadas",
+            "Ejecucion de pruebas funcionales y validaciones tecnicas sobre vistas en SAP UI5",
+            "Gestion de accesos y roles en SAP Fiori y SAP GUI"
+          ],
+          "tags": ["SAP UI5", "SAP MM", "Fiori", "RFC", "Testing"]
+        },
+        {
+          "title": "Lider de Aplicaciones / Desarrollador ABAP",
+          "company": "Laboratorio Farmaceutico La Sante",
+          "date": "Noviembre 2023 - Noviembre 2024",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Diseno y ajuste de reportes y formularios SAP en modulos SD y FI",
+            "Mantenimiento correctivo y evolutivo de RFCs para facturacion electronica",
+            "Desarrollo y administracion de Web Services mediante SOA Manager",
+            "Apoyo en migracion de programas ECC a SAP HANA",
+            "Validacion de codigo mediante Code Inspector y analisis de rendimiento con SQL Trace"
+          ],
+          "tags": ["ABAP", "SAP SD", "SAP FI", "Web Services", "SAP HANA", "SOA Manager"]
+        },
+        {
+          "title": "Freelance Consultor Funcional FI",
+          "company": "Remoto",
+          "date": "Diciembre 2023 - Junio 2024",
+          "location": "Remoto",
+          "description": [
+            "Revision funcional y tecnica de reportes en SAP BW (compras y cuentas por pagar)",
+            "Elaboracion de estimaciones de esfuerzo para ajustes en reportes de activos fijos",
+            "Apoyo documental en pruebas y transportes de proyectos SAP"
+          ],
+          "tags": ["SAP FI", "SAP BW", "Reportes", "Documentacion"]
+        },
+        {
+          "title": "Desarrollador ABAP Junior",
+          "company": "HR Solutions",
+          "date": "Junio 2023 - Noviembre 2023",
+          "location": "Remoto",
+          "description": [
+            "Desarrollo y ajuste de programas ABAP en entornos SAP HR y HCM",
+            "Participacion en pruebas y documentacion vinculados a SAP SuccessFactors",
+            "Creacion y mantenimiento de tablas Z, estructuras de datos y vistas de mantenimiento",
+            "Desarrollo de reportes ALV, formularios SmartForms con principios de ABAP OO"
+          ],
+          "tags": ["ABAP", "SAP HR", "HCM", "SuccessFactors", "ALV", "SmartForms"]
+        },
+        {
+          "title": "Desarrollador ABAP",
+          "company": "INDRA Colombia S.A.S.",
+          "date": "Diciembre 2022 - Febrero 2023",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Soporte en desarrollos ABAP del modulo FI con ajustes menores y debugging",
+            "Documentacion tecnica y participacion en pruebas unitarias",
+            "Familiarizacion con reportes ALV, SmartForms y estructuras de ampliacion",
+            "Creacion y gestion de ordenes de transporte mediante STMS"
+          ],
+          "tags": ["ABAP", "SAP FI", "ALV", "SmartForms", "STMS"]
+        },
+        {
+          "title": "Coordinador Senior / Desarrollador ABAP Junior",
+          "company": "Nortesantandereana de Gas S.A. E.S.P.",
+          "date": "Diciembre 2017 - Junio 2023",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Documentacion de RFPs y mantenimiento de backlogs Scrum",
+            "Facilitacion de sprint planning, reviews y retrospectivas",
+            "Diseno y optimizacion de diagramas de flujo de trabajo",
+            "Desarrollo ABAP: creacion, ajuste y modificacion de programas",
+            "Ejecucion de pruebas unitarias tecnicas y debugging de programas Z"
+          ],
+          "tags": ["ABAP", "Scrum", "Project Management", "Sprint Planning", "Testing"]
+        },
+        {
+          "title": "Gerente de Proyecto",
+          "company": "Inversiones del Nordeste S.A.",
+          "date": "Octubre 2016 - Diciembre 2017",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Planificacion y lanzamiento de plataforma online de venta de vehiculos",
+            "Supervision de seleccion de proveedores, contratacion y entrega",
+            "Gestion bajo metodologia PMI"
+          ],
+          "tags": ["PMI", "Project Management", "E-commerce", "Stakeholders"]
+        },
+        {
+          "title": "Analista Comercial",
+          "company": "Inversiones del Nordeste S.A.",
+          "date": "Diciembre 2014 - Octubre 2016",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Seguimiento de KPIs de ventas y evaluacion de casos de negocio",
+            "Apoyo en presupuestacion anual y pronosticos"
+          ],
+          "tags": ["KPIs", "Business Analysis", "Budget", "Forecasting"]
+        },
+        {
+          "title": "Jefe de Procesos",
+          "company": "Nortesantandereana de Gas S.A. E.S.P.",
+          "date": "Enero 2012 - Junio 2020",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Coordinacion de requerimientos funcionales SAP (MM, SD, FI, PM) con consultores tecnicos",
+            "Procesos de reingenieria de negocio y consolidacion de datos para informes financieros",
+            "Tester funcional con planificacion y ejecucion de pruebas bajo metodologia Agile"
+          ],
+          "tags": ["SAP MM", "SAP SD", "SAP FI", "SAP PM", "Agile", "Testing"]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades Tecnicas",
+      "databases": "Bases de Datos",
+      "methodologies": "Metodologias"
+    },
+    "projects": {
+      "title": "Proyectos Destacados",
+      "items": [
+        {
+          "title": "Colombia-IA",
+          "description": "Iniciativa open-source para democratizar la inteligencia artificial en Colombia. Herramientas de codigo abierto, soluciones de bajo costo y alto impacto social.",
+          "tags": ["Open Source", "AI", "Python", "Community"],
+          "github": "https://github.com/colombia-ia",
+          "website": "https://colombia-ia.github.io/",
+          "icon": "fa-robot"
+        },
+        {
+          "title": "Edge Labs Dev",
+          "description": "Plataforma de desarrollo enfocada en Automatizacion e Inteligencia Artificial. Soluciones empresariales con Go, PostgreSQL y arquitecturas modernas.",
+          "tags": ["Go", "PostgreSQL", "Docker", "AI"],
+          "website": "https://edgelabsdev.com/",
+          "icon": "fa-microchip"
+        },
+        {
+          "title": "SurvivalArena",
+          "description": "Videojuego 2D con oponentes IA y mecanicas de combate. Desarrollado en Unity con patrones de diseno y comportamientos inteligentes.",
+          "tags": ["Unity", "C#", "Game Dev", "AI"],
+          "github": "https://github.com/DanielCRincon/SurvivalArena",
+          "icon": "fa-gamepad"
+        },
+        {
+          "title": "Security Portfolio",
+          "description": "Coleccion de ejercicios de ciberseguridad y CTF challenges. Demostracion de habilidades en seguridad informatica y ethical hacking.",
+          "tags": ["Security", "CTF", "Python", "Pentesting"],
+          "github": "https://github.com/DanielCRincon/Security-Portfolio",
+          "icon": "fa-shield-halved"
+        }
+      ]
+    },
+    "education": {
+      "title": "Educacion y Certificaciones",
+      "degrees": "Titulos Academicos",
+      "certs": "Certificaciones",
+      "software": "Ingeniero de Software",
+      "industrial": "Ingeniero Industrial"
+    },
+    "contact": {
+      "title": "Contacto",
+      "heading": "Trabajemos juntos",
+      "description": "Estoy abierto a nuevas oportunidades y proyectos interesantes. Ya sea que necesites un consultor SAP ABAP, un desarrollador Full Stack, o ambos, no dudes en contactarme."
+    },
+    "footer": {
+      "designed": "Disenado y desarrollado por Daniel Cabrera Rincon"
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About Me",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects",
+      "education": "Education",
+      "contact": "Contact",
+      "download": "Download CV"
+    },
+    "hero": {
+      "greeting": "Hi, my name is",
+      "titles": [
+        "SAP ABAP Consultant",
+        "Full Stack Developer",
+        "Scrum Master",
+        "Software Engineer"
+      ],
+      "description": "Software and Industrial Engineer with a hybrid technical profile. Specialized in SAP ABAP and Full Stack development with Go, PostgreSQL, and Docker.",
+      "cta": "View my experience",
+      "contact": "Contact me"
+    },
+    "about": {
+      "title": "About Me",
+      "p1": "I'm a professional with dual education as a <span class=\"highlight\">Software Engineer</span> and <span class=\"highlight\">Industrial Engineer</span>, which gives me a unique perspective for addressing technical and business challenges.",
+      "p2": "I have a solid track record of <span class=\"highlight\">+13 years</span> in the SAP world, specializing in ABAP development for FI, SD, MM, and HR modules. Currently, I'm expanding my profile as a <span class=\"highlight\">Full Stack Developer</span>, building modern solutions with Go, PostgreSQL, and Docker.",
+      "p3": "My approach combines the robustness of the Enterprise world with the agility of new technologies. I'm the founder of <span class=\"highlight\">Colombia-IA</span>, an open-source initiative to democratize artificial intelligence.",
+      "years": "Years of experience",
+      "projects": "Projects completed",
+      "certifications": "Certifications"
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "jobs": [
+        {
+          "title": "Freelance Junior Full Stack Developer",
+          "company": "EdgeLabsDev",
+          "date": "January 2025 - Present",
+          "location": "Remote",
+          "description": [
+            "Develop and integrate frontend interfaces (HTML/CSS/JS) with backend services in Go, ensuring smooth API REST communication",
+            "Implement security architecture using JWT and middleware to protect endpoints",
+            "Deploy infrastructure environments (PostgreSQL and pgAdmin) with Docker Compose",
+            "Optimize development workflow using generative AI tools (Claude Code)",
+            "Configure Git repositories and manage tasks using agile methodologies"
+          ],
+          "tags": ["Go", "PostgreSQL", "Docker", "JWT", "REST API", "Git"]
+        },
+        {
+          "title": "Freelance SAP ABAP Developer",
+          "company": "Star Net Consulting, Inc.",
+          "date": "November 2024 - Present",
+          "location": "Remote",
+          "description": [
+            "Z Programs Development: Design and build ALV reports and custom programs",
+            "BAPIs Integration (SD): Sales process automation using standard BAPIs",
+            "OData Services Exposure: Development of OData services in SAP Gateway",
+            "Optimization and Tuning: Performance analysis and legacy code refactoring",
+            "Specialized Technical Support: Incident resolution through deep debugging"
+          ],
+          "tags": ["ABAP", "SAP SD", "OData", "BAPIs", "ALV", "Gateway"]
+        },
+        {
+          "title": "Freelance ABAP HR - FI Developer",
+          "company": "SMX Services & Consulting, Inc.",
+          "date": "December 2024 - Present",
+          "location": "Remote",
+          "description": [
+            "Maintenance and optimization of applications in SAP GUI and Web Dynpro ABAP",
+            "Development of customizations through enhancements and user exits",
+            "Creation of custom infotypes and adjustments on standard SAP HR module infotypes",
+            "Implementation and support of SmartForms and HRFORM forms",
+            "Development and integration through SAP PI for inter-system communication"
+          ],
+          "tags": ["ABAP", "SAP HR", "SAP FI", "SmartForms", "SAP PI", "Web Dynpro"]
+        },
+        {
+          "title": "Junior Functional Consultant SAP UI5",
+          "company": "Innova SAS",
+          "date": "November 2024 - January 2025",
+          "location": "Remote",
+          "description": [
+            "Gathering functional requirements for SAP UI5 application focused on MM module",
+            "Elaboration of detailed functional specifications for ABAP developments and UI5 designs",
+            "Coordination with ABAP developers to validate delivered RFCs and functions",
+            "Execution of functional tests and technical validations on SAP UI5 views",
+            "Management of access and roles in SAP Fiori and SAP GUI"
+          ],
+          "tags": ["SAP UI5", "SAP MM", "Fiori", "RFC", "Testing"]
+        },
+        {
+          "title": "Applications Leader / ABAP Developer",
+          "company": "Laboratorio Farmaceutico La Sante",
+          "date": "November 2023 - November 2024",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Design and adjustment of SAP reports and forms in SD and FI modules",
+            "Corrective and evolutionary maintenance of RFCs for electronic invoicing",
+            "Development and administration of Web Services through SOA Manager",
+            "Support in program migration from ECC to SAP HANA",
+            "Code validation using Code Inspector and performance analysis with SQL Trace"
+          ],
+          "tags": ["ABAP", "SAP SD", "SAP FI", "Web Services", "SAP HANA", "SOA Manager"]
+        },
+        {
+          "title": "Freelance FI Functional Consultant",
+          "company": "Remote",
+          "date": "December 2023 - June 2024",
+          "location": "Remote",
+          "description": [
+            "Functional and technical review of SAP BW reports (purchases and accounts payable)",
+            "Effort estimation for adjustments in fixed assets and projects reports",
+            "Documentary support in testing and transports for SAP projects"
+          ],
+          "tags": ["SAP FI", "SAP BW", "Reports", "Documentation"]
+        },
+        {
+          "title": "Junior ABAP Developer",
+          "company": "HR Solutions",
+          "date": "June 2023 - November 2023",
+          "location": "Remote",
+          "description": [
+            "Development and adjustment of ABAP programs in SAP HR and HCM environments",
+            "Participation in testing and documentation linked to SAP SuccessFactors",
+            "Creation and maintenance of Z tables, data structures, and maintenance views",
+            "Development of ALV reports, SmartForms with ABAP OO principles"
+          ],
+          "tags": ["ABAP", "SAP HR", "HCM", "SuccessFactors", "ALV", "SmartForms"]
+        },
+        {
+          "title": "ABAP Developer",
+          "company": "INDRA Colombia S.A.S.",
+          "date": "December 2022 - February 2023",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Support in ABAP developments for FI module with minor adjustments and debugging",
+            "Technical documentation and participation in unit tests",
+            "Familiarization with ALV reports, SmartForms and extension structures",
+            "Creation and management of transport orders through STMS"
+          ],
+          "tags": ["ABAP", "SAP FI", "ALV", "SmartForms", "STMS"]
+        },
+        {
+          "title": "Senior Coordinator / Junior ABAP Developer",
+          "company": "Nortesantandereana de Gas S.A. E.S.P.",
+          "date": "December 2017 - June 2023",
+          "location": "Bogota, Colombia",
+          "description": [
+            "RFP documentation and Scrum backlog maintenance",
+            "Facilitation of sprint planning, reviews and retrospectives",
+            "Design and optimization of workflow diagrams",
+            "ABAP Development: creation, adjustment and modification of programs",
+            "Execution of technical unit tests and debugging of Z programs"
+          ],
+          "tags": ["ABAP", "Scrum", "Project Management", "Sprint Planning", "Testing"]
+        },
+        {
+          "title": "Project Manager",
+          "company": "Inversiones del Nordeste S.A.",
+          "date": "October 2016 - December 2017",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Planning and launch of online vehicle sales platform",
+            "Supervision of vendor selection, hiring and delivery",
+            "Management under PMI methodology"
+          ],
+          "tags": ["PMI", "Project Management", "E-commerce", "Stakeholders"]
+        },
+        {
+          "title": "Commercial Analyst",
+          "company": "Inversiones del Nordeste S.A.",
+          "date": "December 2014 - October 2016",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Sales KPIs tracking and business case evaluation",
+            "Support in annual budgeting and forecasting"
+          ],
+          "tags": ["KPIs", "Business Analysis", "Budget", "Forecasting"]
+        },
+        {
+          "title": "Process Manager",
+          "company": "Nortesantandereana de Gas S.A. E.S.P.",
+          "date": "January 2012 - June 2020",
+          "location": "Bogota, Colombia",
+          "description": [
+            "Coordination of SAP functional requirements (MM, SD, FI, PM) with technical consultants",
+            "Business reengineering processes and data consolidation for financial reports",
+            "Functional tester with planning and test execution under Agile methodology"
+          ],
+          "tags": ["SAP MM", "SAP SD", "SAP FI", "SAP PM", "Agile", "Testing"]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "databases": "Databases",
+      "methodologies": "Methodologies"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "items": [
+        {
+          "title": "Colombia-IA",
+          "description": "Open-source initiative to democratize artificial intelligence in Colombia. Open source tools, low-cost solutions with high social impact.",
+          "tags": ["Open Source", "AI", "Python", "Community"],
+          "github": "https://github.com/colombia-ia",
+          "website": "https://colombia-ia.github.io/",
+          "icon": "fa-robot"
+        },
+        {
+          "title": "Edge Labs Dev",
+          "description": "Development platform focused on Automation and Artificial Intelligence. Enterprise solutions with Go, PostgreSQL and modern architectures.",
+          "tags": ["Go", "PostgreSQL", "Docker", "AI"],
+          "website": "https://edgelabsdev.com/",
+          "icon": "fa-microchip"
+        },
+        {
+          "title": "SurvivalArena",
+          "description": "2D video game with AI opponents and combat mechanics. Developed in Unity with design patterns and intelligent behaviors.",
+          "tags": ["Unity", "C#", "Game Dev", "AI"],
+          "github": "https://github.com/DanielCRincon/SurvivalArena",
+          "icon": "fa-gamepad"
+        },
+        {
+          "title": "Security Portfolio",
+          "description": "Collection of cybersecurity exercises and CTF challenges. Demonstration of computer security and ethical hacking skills.",
+          "tags": ["Security", "CTF", "Python", "Pentesting"],
+          "github": "https://github.com/DanielCRincon/Security-Portfolio",
+          "icon": "fa-shield-halved"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education & Certifications",
+      "degrees": "Academic Degrees",
+      "certs": "Certifications",
+      "software": "Software Engineer",
+      "industrial": "Industrial Engineer"
+    },
+    "contact": {
+      "title": "Contact",
+      "heading": "Let's work together",
+      "description": "I'm open to new opportunities and interesting projects. Whether you need an SAP ABAP consultant, a Full Stack developer, or both, don't hesitate to contact me."
+    },
+    "footer": {
+      "designed": "Designed and developed by Daniel Cabrera Rincon"
+    }
+  }
+}

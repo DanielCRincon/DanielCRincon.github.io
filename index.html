@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Cabrera Rincon - SAP ABAP Consultant & Full Stack Developer. Portfolio profesional con experiencia en SAP, Go, PostgreSQL y metodologias agiles.">
+    <meta name="keywords" content="SAP, ABAP, Full Stack, Developer, Go, Golang, PostgreSQL, Docker, Scrum">
+    <meta name="author" content="Daniel Cabrera Rincon">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Daniel Cabrera Rincon | SAP ABAP Consultant & Full Stack Developer">
+    <meta property="og:description" content="Ingeniero de Software e Industrial con experiencia en SAP ABAP y desarrollo Full Stack">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danielcrincon.github.io">
+
+    <title>Daniel Cabrera Rincon | SAP ABAP Consultant & Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>DCR<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link" data-i18n="nav.education">Educacion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <!-- Download CV Button -->
+                <button class="btn btn-primary btn-download" id="download-cv">
+                    <i class="fas fa-download"></i>
+                    <span data-i18n="nav.download">Descargar CV</span>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hola, mi nombre es</p>
+            <h1 class="hero-name">Daniel Cabrera Rincon</h1>
+            <h2 class="hero-title">
+                <span class="typed-text" id="typed-text"></span>
+                <span class="cursor">|</span>
+            </h2>
+            <p class="hero-description" data-i18n="hero.description">
+                Ingeniero de Software e Industrial con un perfil tecnico hibrido. Especializado en SAP ABAP y desarrollo Full Stack con Go, PostgreSQL y Docker.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary" data-i18n="hero.cta">Ver mi experiencia</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">Contactame</a>
+            </div>
+
+            <div class="hero-social">
+                <a href="https://linkedin.com/in/daniel-cabrera-ia" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/DanielCRincon" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:danielcabrerarincon@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">
+                <span class="title-number">01.</span> Sobre Mi
+            </h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.p1">
+                        Soy un profesional con formacion dual como <span class="highlight">Ingeniero de Software</span> e <span class="highlight">Ingeniero Industrial</span>, lo que me brinda una perspectiva unica para abordar problemas tecnicos y de negocio.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Cuento con una solida trayectoria de <span class="highlight">+13 anos</span> en el mundo SAP, especializandome en desarrollo ABAP para modulos FI, SD, MM y HR. Actualmente, expando mi perfil como <span class="highlight">Desarrollador Full Stack</span>, construyendo soluciones modernas con Go, PostgreSQL y Docker.
+                    </p>
+                    <p data-i18n="about.p3">
+                        Mi enfoque une la robustez del mundo Enterprise con la agilidad de las nuevas tecnologias. Soy fundador de <span class="highlight">Colombia-IA</span>, iniciativa open-source para democratizar la inteligencia artificial.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">13+</span>
+                            <span class="stat-label" data-i18n="about.years">Anos de experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-label" data-i18n="about.projects">Proyectos completados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-i18n="about.certifications">Certificaciones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experience.title">
+                <span class="title-number">02.</span> Experiencia Profesional
+            </h2>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline" id="timeline">
+                    <!-- Timeline items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">
+                <span class="title-number">03.</span> Habilidades Tecnicas
+            </h2>
+
+            <div class="skills-grid">
+                <!-- SAP & ABAP -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>SAP & ABAP</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FI</span>
+                        <span class="skill-tag">SD</span>
+                        <span class="skill-tag">MM</span>
+                        <span class="skill-tag">HR</span>
+                        <span class="skill-tag">PM</span>
+                        <span class="skill-tag">BAPIs</span>
+                        <span class="skill-tag">User Exits</span>
+                        <span class="skill-tag">Enhancements</span>
+                        <span class="skill-tag">SmartForms</span>
+                        <span class="skill-tag">ALV Reports</span>
+                        <span class="skill-tag">RFC</span>
+                        <span class="skill-tag">Web Services</span>
+                        <span class="skill-tag">SAP PI</span>
+                        <span class="skill-tag">OData</span>
+                        <span class="skill-tag">SAP Gateway</span>
+                    </div>
+                </div>
+
+                <!-- Full Stack Development -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Full Stack Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Go (Golang)</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">SAPUI5</span>
+                        <span class="skill-tag">Web Dynpro</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3 data-i18n="skills.databases">Bases de Datos</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SAP HANA</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">SQLModel</span>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">SE80</span>
+                        <span class="skill-tag">STMS</span>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3 data-i18n="skills.methodologies">Metodologias</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">PMI</span>
+                        <span class="skill-tag">Sprint Planning</span>
+                        <span class="skill-tag">Backlog Grooming</span>
+                        <span class="skill-tag">Retrospectives</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">
+                <span class="title-number">04.</span> Proyectos Destacados
+            </h2>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title" data-i18n="education.title">
+                <span class="title-number">05.</span> Educacion y Certificaciones
+            </h2>
+
+            <div class="education-grid">
+                <!-- Degrees -->
+                <div class="education-column">
+                    <h3 class="column-title" data-i18n="education.degrees">
+                        <i class="fas fa-graduation-cap"></i> Titulos Academicos
+                    </h3>
+
+                    <div class="education-card">
+                        <div class="education-year">2022</div>
+                        <h4 data-i18n="education.software">Ingeniero de Software</h4>
+                        <p class="institution">Politecnico GranColombiano</p>
+                        <p class="location">Bogota, Colombia</p>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-year">2006</div>
+                        <h4 data-i18n="education.industrial">Ingeniero Industrial</h4>
+                        <p class="institution">Escuela Colombiana de Ingenieria</p>
+                        <p class="location">Bogota, Colombia</p>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="education-column">
+                    <h3 class="column-title" data-i18n="education.certs">
+                        <i class="fas fa-certificate"></i> Certificaciones
+                    </h3>
+
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Scrum Master Professional (SMPC)</h4>
+                                <p>CertiProf</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Scrum Product Owner Professional (SPOPC)</h4>
+                                <p>CertiProf</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Agile Coach Professional (ACPC)</h4>
+                                <p>CertiProf</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>IBM Machine Learning Foundations</h4>
+                                <p>IBM</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>SAP UI5</h4>
+                                <p>Logali Group</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Introduction to ABAP in the Cloud</h4>
+                                <p>SAP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">
+                <span class="title-number">06.</span> Contacto
+            </h2>
+
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3 data-i18n="contact.heading">Trabajemos juntos</h3>
+                    <p data-i18n="contact.description">
+                        Estoy abierto a nuevas oportunidades y proyectos interesantes. Ya sea que necesites un consultor SAP ABAP, un desarrollador Full Stack, o ambos, no dudes en contactarme.
+                    </p>
+                </div>
+
+                <div class="contact-info">
+                    <a href="mailto:danielcabrerarincon@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>danielcabrerarincon@gmail.com</span>
+                    </a>
+                    <a href="tel:+573222539049" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+57 322 253 9049</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bogota, Colombia</span>
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/daniel-cabrera-ia" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/DanielCRincon" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://edgelabsdev.com" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fas fa-globe"></i>
+                        Edge Labs Dev
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.designed">Disenado y desarrollado por Daniel Cabrera Rincon</p>
+            <p class="footer-year">2025</p>
+        </div>
+    </footer>
+
+    <!-- Hidden CV Template for PDF -->
+    <div id="cv-pdf-template" class="cv-pdf-template" style="display: none;">
+        <!-- This will be populated by JavaScript for PDF generation -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="data/content.json" type="application/json" id="content-data"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pdf-generator.js"></script>
+</body>
+</html>
