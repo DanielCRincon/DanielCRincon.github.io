@@ -16,14 +16,14 @@ async function generatePDF() {
     try {
         var div = document.createElement("div");
         div.innerHTML = buildCV(es);
-        div.style.cssText = "position:absolute;left:-9999px;width:210mm";
+        div.style.cssText = "position:absolute;top:0;left:0;width:210mm;background:white";
         document.body.appendChild(div);
 
         await html2pdf().set({
             margin: 10,
             filename: "CV_Daniel_Cabrera_" + lang.toUpperCase() + ".pdf",
             image: {type:"jpeg",quality:0.98},
-            html2canvas: {scale:2,useCORS:true},
+            html2canvas: {scale:2,useCORS:true,logging:false,windowWidth:div.scrollWidth,windowHeight:div.scrollHeight},
             jsPDF: {unit:"mm",format:"a4",orientation:"portrait"}
         }).from(div).save();
 
