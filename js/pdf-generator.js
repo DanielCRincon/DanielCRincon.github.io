@@ -1,28 +1,20 @@
 const fs = require('fs');
-const PDFDocument = require('pdfkit');
-const data = require('./data/content.json');
+const pdf = require('pdfkit');
+const contents = JSON.parse(fs.readFileSync('data/content.json', 'utf8'));
 
 function generatePDF() {
-  const doc = new PDFDocument();
-  const filePath = `output/experience.pdf`;
-
-  doc.pipe(fs.createWriteStream(filePath));
-
-  // Add a title
-  doc.fontSize(25).text('Experience', { underline: true });
-  doc.moveDown();
-
-  data.jobs.forEach(job => {
-      doc.fontSize(18).text(job.title);
-      doc.fontSize(12).text(`Company: ${job.company}`);
-      doc.fontSize(12).text(`Location: ${job.location}`);
-      doc.fontSize(12).text(`Duration: ${job.duration}`);
-      doc.fontSize(12).text(`Description: ${job.description}`);
-      doc.moveDown();
-  });
-
-  doc.end();
-  console.log(`PDF generated at: ${filePath}`);
+    const doc = new pdf();
+    doc.pipe(fs.createWriteStream('output/comprehensive_jobs.pdf'));
+    
+    contents.jobs.forEach(job => {
+        doc.text(`Position: ${job.position}`);
+        doc.text(`Description: ${job.description}`);
+        doc.text(`Responsibilities: ${job.responsibilities.join(', ')}`);
+        doc.text(`Skills: ${job.skills.join(', ')}`);
+        doc.addPage();
+    });
+    
+    doc.end();
 }
 
 generatePDF();
