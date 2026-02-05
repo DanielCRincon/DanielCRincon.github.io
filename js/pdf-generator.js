@@ -12,7 +12,10 @@ function downloadCV() {
     tempDiv.innerHTML = buildCV(es);
     tempDiv.style.cssText = getPrintStyles();
     
-    // Configurar opciones de html2pdf - reducir escala para evitar letras grandes
+    // Añadir el elemento temporal al body para que html2canvas lo capture correctamente
+    document.body.appendChild(tempDiv);
+    
+    // Configurar opciones de html2pdf - corregir alineación y viewport
     var opt = {
         margin: 10,
         filename: es ? 'Daniel_Cabrera_Rincon_CV_ES.pdf' : 'Daniel_Cabrera_Rincon_CV_EN.pdf',
@@ -21,18 +24,23 @@ function downloadCV() {
             scale: 1,
             scrollX: 0,
             scrollY: 0,
-            windowWidth: 800,
-            windowHeight: 1200
+            width: tempDiv.scrollWidth,
+            height: tempDiv.scrollHeight,
+            useCORS: true,
+            allowTaint: true
         },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
     // Generar y descargar el PDF
-    html2pdf().set(opt).from(tempDiv).save();
+    html2pdf().set(opt).from(tempDiv).save().then(() => {
+        // Remover el elemento temporal después de generar el PDF
+        document.body.removeChild(tempDiv);
+    });
 }
 
 function getPrintStyles() {
-    return "font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333; line-height: 1.4; padding: 15px; background: white; max-width: 800px; margin: 0 auto; word-wrap: break-word; overflow-wrap: break-word;";
+    return "font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333; line-height: 1.4; padding: 15px; background: white; width: 100%; max-width: 800px; margin: 0; word-wrap: break-word; overflow-wrap: break-word; position: absolute; left: 0; top: 0;";
 }
 
 function buildCV(es) {
@@ -48,7 +56,7 @@ function buildCV(es) {
         : "Software and Industrial Engineer with 13+ years of SAP ABAP experience. Specialized in FI, SD, MM, and HR modules. Currently expanding profile as Full Stack Developer with Go, PostgreSQL, and Docker. Founder of Colombia-IA, an open-source initiative to democratize AI.";
 
     var html = "";
-    html += "<div style='font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333; line-height: 1.4; padding: 15px; background: white; max-width: 800px; margin: 0 auto; word-wrap: break-word; overflow-wrap: break-word;'>";
+    html += "<div style='font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333; line-height: 1.4; padding: 15px; background: white; width: 100%; max-width: 800px; margin: 0; word-wrap: break-word; overflow-wrap: break-word; position: relative;'>";
     
     html += "<h1 style='font-size: 24px; color: #0A192F; text-align: center; margin-bottom: 5px;'>DANIEL CABRERA RINCON</h1>";
     html += "<p style='text-align: center; color: #555; margin-bottom: 5px; font-size: 14px;'>SAP ABAP Consultant | Full Stack Developer</p>";
