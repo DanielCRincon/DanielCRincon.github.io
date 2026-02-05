@@ -30,86 +30,44 @@ function printCV() {
 function getPrintStyles() {
     return [
         "* { margin: 0; padding: 0; box-sizing: border-box; }",
-        "body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #333; line-height: 1.4; padding: 15mm; background: white; }",
-        "@page { size: A4; margin: 10mm; }",
+        "body { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #333; line-height: 1.3; padding: 10mm; background: white; }",
+        "@page { size: A4; margin: 8mm; }",
         "@media print { body { padding: 0; } }",
-        "h1 { font-size: 20pt; color: #0A192F; text-align: center; margin-bottom: 5px; }",
-        "h2 { font-size: 12pt; color: #0A192F; border-bottom: 2px solid #0A192F; padding-bottom: 3px; margin: 15px 0 8px 0; }",
-        "h3 { font-size: 11pt; margin: 8px 0 3px 0; }",
-        ".subtitle { text-align: center; color: #555; margin-bottom: 5px; }",
-        ".contact-info { text-align: center; font-size: 9pt; color: #666; margin-bottom: 15px; }",
-        ".profile { margin-bottom: 10px; }",
-        ".job { margin-bottom: 10px; page-break-inside: avoid; }",
+        "h1 { font-size: 18pt; color: #0A192F; text-align: center; margin-bottom: 3px; }",
+        "h2 { font-size: 11pt; color: #0A192F; border-bottom: 2px solid #0A192F; padding-bottom: 2px; margin: 10px 0 6px 0; }",
+        ".subtitle { text-align: center; color: #555; margin-bottom: 3px; font-size: 10pt; }",
+        ".contact-info { text-align: center; font-size: 8pt; color: #666; margin-bottom: 10px; }",
+        ".profile { margin-bottom: 8px; font-size: 9pt; }",
+        ".job { margin-bottom: 8px; page-break-inside: avoid; }",
         ".job-header { display: flex; justify-content: space-between; align-items: baseline; }",
-        ".job-title { font-weight: bold; }",
-        ".job-period { font-size: 9pt; color: #666; }",
-        ".job-company { font-style: italic; color: #555; }",
-        ".skills-section { margin-bottom: 10px; }",
-        ".skill-group { margin-bottom: 5px; }",
+        ".job-title { font-weight: bold; font-size: 10pt; }",
+        ".job-period { font-size: 8pt; color: #666; }",
+        ".job-company { font-style: italic; color: #555; font-size: 9pt; margin-bottom: 2px; }",
+        ".job-responsibilities { margin-left: 15px; margin-top: 2px; font-size: 9pt; }",
+        ".job-responsibilities li { margin-bottom: 1px; }",
+        ".job-tags { font-size: 8pt; color: #0A192F; margin-top: 3px; font-style: italic; }",
+        ".skills-section { margin-bottom: 8px; font-size: 9pt; }",
+        ".skill-group { margin-bottom: 3px; }",
         ".skill-label { font-weight: bold; }",
-        ".education-item { margin-bottom: 8px; }",
+        ".education-item { margin-bottom: 5px; font-size: 9pt; }",
         ".edu-year { font-weight: bold; color: #0A192F; }",
-        ".footer { text-align: center; margin-top: 20px; font-size: 8pt; color: #999; }",
-        "ul { margin-left: 20px; margin-top: 3px; }",
-        "li { margin-bottom: 2px; }"
+        ".footer { text-align: center; margin-top: 15px; font-size: 8pt; color: #999; }",
+        "ul { margin-left: 15px; margin-top: 2px; }",
+        "li { margin-bottom: 1px; }"
     ].join("\n");
 }
 
 function buildCV(es) {
+    // Obtener datos del JSON de traducciones
+    var translations = window.i18n?.getCurrentTranslations();
+    var jobs = translations?.experience?.jobs || [];
+
+    // Limitar a los primeros 6 trabajos más relevantes para el PDF
+    var topJobs = jobs.slice(0, 6);
+
     var profile = es
         ? "Ingeniero de Software e Industrial con mas de 13 anos de experiencia en SAP ABAP. Especializado en modulos FI, SD, MM y HR. Actualmente expandiendo perfil como Desarrollador Full Stack con Go, PostgreSQL y Docker. Fundador de Colombia-IA, iniciativa open-source para democratizar la inteligencia artificial."
         : "Software and Industrial Engineer with 13+ years of SAP ABAP experience. Specialized in FI, SD, MM, and HR modules. Currently expanding profile as Full Stack Developer with Go, PostgreSQL, and Docker. Founder of Colombia-IA, an open-source initiative to democratize AI.";
-
-    var jobs = [
-        {
-            title: "Full Stack Developer",
-            company: "EdgeLabsDev",
-            period: "2025 - " + (es ? "Presente" : "Present"),
-            desc: es
-                ? "Desarrollo de soluciones web empresariales con Go, PostgreSQL y Docker."
-                : "Enterprise web solutions development with Go, PostgreSQL, and Docker."
-        },
-        {
-            title: "SAP ABAP Developer",
-            company: "Star Net Consulting",
-            period: "2024 - " + (es ? "Presente" : "Present"),
-            desc: es
-                ? "Desarrollo ABAP para clientes corporativos en modulos FI/SD/MM."
-                : "ABAP development for corporate clients in FI/SD/MM modules."
-        },
-        {
-            title: "ABAP HR-FI Developer",
-            company: "SMX Services",
-            period: "2024 - " + (es ? "Presente" : "Present"),
-            desc: es
-                ? "Especializacion en integracion HR-FI, reportes y automatizaciones."
-                : "Specialization in HR-FI integration, reports, and automations."
-        },
-        {
-            title: es ? "Lider de Aplicaciones" : "Applications Leader",
-            company: "Laboratorios La Sante",
-            period: "2023 - 2024",
-            desc: es
-                ? "Liderazgo de equipo de desarrollo y gestion de proyectos SAP."
-                : "Development team leadership and SAP project management."
-        },
-        {
-            title: "ABAP Developer",
-            company: "HR Solutions",
-            period: "2023",
-            desc: es
-                ? "Desarrollo de soluciones HR en SAP, nomina y gestion de personal."
-                : "SAP HR solutions development, payroll, and personnel management."
-        },
-        {
-            title: es ? "Coordinador ABAP" : "ABAP Coordinator",
-            company: "Nortesantandereana de Gas",
-            period: "2017 - 2023",
-            desc: es
-                ? "Coordinacion del equipo ABAP, desarrollo en FI/SD/MM/PM."
-                : "ABAP team coordination, development in FI/SD/MM/PM."
-        }
-    ];
 
     var html = "";
     html += "<h1>DANIEL CABRERA RINCON</h1>";
@@ -121,12 +79,27 @@ function buildCV(es) {
     html += "<p class='profile'>" + profile + "</p>";
 
     html += "<h2>" + (es ? "EXPERIENCIA PROFESIONAL" : "PROFESSIONAL EXPERIENCE") + "</h2>";
-    for (var i = 0; i < jobs.length; i++) {
-        var job = jobs[i];
+
+    for (var i = 0; i < topJobs.length; i++) {
+        var job = topJobs[i];
         html += "<div class='job'>";
-        html += "<div class='job-header'><span class='job-title'>" + job.title + "</span><span class='job-period'>" + job.period + "</span></div>";
-        html += "<div class='job-company'>" + job.company + "</div>";
-        html += "<p>" + job.desc + "</p>";
+        html += "<div class='job-header'><span class='job-title'>" + job.title + "</span><span class='job-period'>" + job.date + "</span></div>";
+        html += "<div class='job-company'>" + job.company + " | " + job.location + "</div>";
+
+        // Usar las descripciones del JSON (array de responsabilidades)
+        if (job.description && job.description.length > 0) {
+            html += "<ul class='job-responsibilities'>";
+            for (var j = 0; j < job.description.length; j++) {
+                html += "<li>" + job.description[j] + "</li>";
+            }
+            html += "</ul>";
+        }
+
+        // Tags/tecnologías
+        if (job.tags && job.tags.length > 0) {
+            html += "<div class='job-tags'>" + job.tags.join(" | ") + "</div>";
+        }
+
         html += "</div>";
     }
 
