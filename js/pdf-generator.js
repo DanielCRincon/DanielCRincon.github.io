@@ -1,20 +1,29 @@
-const fs = require('fs');
-const pdf = require('pdfkit');
-const contents = JSON.parse(fs.readFileSync('data/content.json', 'utf8'));
+// Import the necessary libraries
+import { html2pdf } from 'html2pdf.js';
 
-function generatePDF() {
-    const doc = new pdf();
-    doc.pipe(fs.createWriteStream('output/comprehensive_jobs.pdf'));
-    
-    contents.jobs.forEach(job => {
-        doc.text(`Position: ${job.position}`);
-        doc.text(`Description: ${job.description}`);
-        doc.text(`Responsibilities: ${job.responsibilities.join(', ')}`);
-        doc.text(`Skills: ${job.skills.join(', ')}`);
-        doc.addPage();
-    });
-    
-    doc.end();
-}
+// Fetch job descriptions from content.json
+fetch('data/content.json')
+    .then(response => response.json())
+    .then(data => {
+        const jobDescriptions = data.jobDescriptions; // Assuming jobDescriptions is an array
 
-generatePDF();
+        // Create a container for PDF content
+        const contentDiv = document.createElement('div');
+
+        jobDescriptions.forEach(job => {
+            const jobElement = document.createElement('div');
+            jobElement.innerHTML = `<h2>${job.title}</h2><p>${job.description}</p>`;
+            contentDiv.appendChild(jobElement);
+        });
+
+        // Generate PDF
+        const options = {
+            margin: 1,
+            filename: 'job_descriptions.pdf',
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().from(contentDiv).set(options).save();
+    })
+    .catch(error => console.error('Error fetching job descriptions:', error));
